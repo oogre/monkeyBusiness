@@ -27,6 +27,10 @@ public class HangOn : MonoBehaviour
 
     void Update()
     {
+        if (attachOn) {
+            this.gameObject.transform.position = attachOn.gameObject.transform.position;
+        }
+
         if (attachOn && !oldAttachOn)
         {
             rb.constraints = fixe;
